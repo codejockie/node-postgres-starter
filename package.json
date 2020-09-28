@@ -1,0 +1,62 @@
+{
+  "name": "node-postgres-starter",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Starter project using Express, Postgres and TypeScript",
+  "main": "dist/config.js",
+  "scripts": {
+    "build": "tsc",
+    "test": "xo",
+    "lint": "xo",
+    "format": "xo --fix",
+    "start": "node dist/bin/start.js",
+    "dev": "nodemon src/bin/start.ts",
+    "migrate": "ts-node src/bin/migrate.ts",
+    "migrate:create": "migrate create --compiler='js:typescript' --migrations-dir='./src/migrations'"
+  },
+  "keywords": [
+    "express",
+    "node",
+    "postgres",
+    "typescript"
+  ],
+  "author": "John C. Kennedy",
+  "license": "MIT",
+  "dependencies": {
+    "bcrypt": "^5.0.0",
+    "client-sessions": "^0.8.0",
+    "express": "^4.17.1",
+    "helmet": "^4.1.1",
+    "migrate": "^1.7.0",
+    "morgan": "^1.10.0",
+    "pg": "^8.3.3",
+    "sql-template-strings": "^2.2.2",
+    "uuid": "^8.3.0"
+  },
+  "devDependencies": {
+    "@types/bcrypt": "^3.0.0",
+    "@types/client-sessions": "^0.8.0",
+    "@types/express": "^4.17.8",
+    "@types/helmet": "0.0.48",
+    "@types/morgan": "^1.9.1",
+    "@types/node": "^14.11.2",
+    "@types/pg": "^7.14.5",
+    "@types/uuid": "^8.3.0",
+    "nodemon": "^2.0.4",
+    "ts-node": "^9.0.0",
+    "typescript": "^4.0.3",
+    "xo": "^0.33.1"
+  },
+  "xo": {
+    "prettier": true,
+    "space": true
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/codejockie/node-postgres-starter.git"
+  },
+  "bugs": {
+    "url": "https://github.com/codejockie/node-postgres-starter/issues"
+  },
+  "homepage": "https://github.com/codejockie/node-postgres-starter#readme"
+}
