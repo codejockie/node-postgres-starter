@@ -1,4 +1,4 @@
-# Express Postgres Starter
+# Node Postgres Starter
 
 > A starter project for Node.js with Express and Postgres
 
@@ -12,14 +12,14 @@ Run `docker-compose up` in the root of the project.
 
 It will bring up Postgres and the Express application server in development mode.
 
-It binds the application server to `localhost:3000`, this can be re-mapped this by changing the first 3000 in `3000:3000` of [./docker-compose.yaml](./docker-compose.yaml)).
+It binds the application server to `localhost:4000`, this can be re-mapped this by changing the first 4000 in `4000:4000` of [./docker-compose.yaml](./docker-compose.yaml)).
 
-Postgres is exposed on port `35432`. The connection string is `postgres://user:pass@localhost:35432/db` (username, password and database name are defined in [./docker-compose.yaml](./docker-compose.yaml)).
+Postgres is exposed on port `5432`. The connection string is `postgres://user:pass@localhost:5432/db` (username, password and database name are defined in [./docker-compose.yaml](./docker-compose.yaml)).
 
 You can connect to Postgres using the psql client:
 
 ```sh
-psql postgres://user:pass@localhost:35432/db
+psql postgres://user:pass@localhost:5432/db
 ```
 
 The default Docker `CMD` is `npm start`, [./docker-compose.yaml](./docker-compose.yaml) overrides this to `npm run dev` which runs the application using nodemon (auto-restart on file change).
@@ -37,7 +37,7 @@ This application loosely follows the [Presentation Domain Data Layering](https:/
 
 - Presentation is dealt with in the `./src/api` folder
 - Domain is dealt with in the `./src/modules` folder. It's currently non-existent since we've only got generic user and session resources.
-- Data is dealt with in the `./src/persistence` folder
+- Data is dealt with in the `./src/data` folder
 
 ## Database setup + management
 
