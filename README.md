@@ -8,7 +8,7 @@ Pre-requisites:
 
 - Docker for Desktop
 
-Run `docker-compose up` in the root of the project.
+Run `docker-compose up -f dev-docker-compose.yml` in the root of the project.
 
 It will bring up Postgres and the Express application server in development mode.
 
