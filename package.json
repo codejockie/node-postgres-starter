@@ -8,7 +8,7 @@
     "build": "tsc",
     "test": "",
     "start": "node dist/bin/start.js",
-    "dev": "nodemon src/bin/start.ts",
+    "dev": "nodemon --exec ts-node -r tsconfig-paths/register src/bin/start.ts",
     "migrate": "ts-node src/bin/migrate.ts",
     "migrate:create": "migrate create --compiler='js:typescript' --migrations-dir='./src/migrations'"
   },
@@ -42,6 +42,7 @@
     "@types/uuid": "^8.3.0",
     "nodemon": "^2.0.4",
     "ts-node": "^9.0.0",
+    "tsconfig-paths": "^3.9.0",
     "typescript": "^4.0.3"
   },
   "xo": {

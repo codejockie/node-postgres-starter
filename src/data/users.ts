@@ -1,8 +1,7 @@
 import * as bcrypt from "bcrypt";
+import { v4 as uuid } from "uuid";
 import sql from "sql-template-strings";
-import { v4 as uuidv4 } from "uuid";
-
-import db from "./db";
+import db from "@/data/db";
 
 export default {
   async create(email: string, password: string) {
@@ -11,7 +10,7 @@ export default {
 
       const { rows } = await db.query(sql`
       INSERT INTO users (id, email, password)
-        VALUES (${uuidv4()}, ${email}, ${hashedPassword})
+        VALUES (${uuid()}, ${email}, ${hashedPassword})
         RETURNING id, email;
       `);
 

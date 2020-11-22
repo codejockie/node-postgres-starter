@@ -3,9 +3,8 @@ import * as helmet from "helmet";
 import * as morgan from "morgan";
 import * as express from "express";
 import * as clientSession from "client-sessions";
-
-import api from "./api";
-import config from "./config";
+import api from "@/api";
+import config from "@/config";
 
 const app = express();
 

@@ -1,6 +1,5 @@
 import { NextFunction, Response } from "express";
-
-import Session from "../data/sessions";
+import Session from "@/data/sessions";
 import { CRequest } from "@/types/request";
 
 const sessionMiddleware = async (request: CRequest, response: Response, next: NextFunction) => {

@@ -1,10 +1,10 @@
+import { v4 as uuid } from "uuid";
 import sql from "sql-template-strings";
-import { v4 as uuidv4 } from "uuid";
-import db from "./db";
+import db from "@/data/db";
 
 export default {
   async create(userId: string) {
-    const id = uuidv4();
+    const id = uuid();
     await db.query(sql`
     INSERT INTO sessions (id, user_id)
       VALUES (${id}, ${userId});

@@ -1,10 +1,10 @@
 import * as bcrypt from "bcrypt";
 import { Router } from "express";
 
-import User from "../data/users";
-import Session from "../data/sessions";
+import User from "@/data/users";
+import Session from "@/data/sessions";
 import { CRequest } from "@/types/request";
-import sessionMiddleware from "../middleware/session-middleware";
+import sessionMiddleware from "@/middleware/session-middleware";
 
 const router = Router();
 

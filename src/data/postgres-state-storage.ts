@@ -1,7 +1,7 @@
 import { Pool } from "pg";
 import sql from "sql-template-strings";
 
-import db from "./db";
+import db from "@/data/db";
 
 const ensureMigrationsTable = (db: Pool) =>
   db.query(
